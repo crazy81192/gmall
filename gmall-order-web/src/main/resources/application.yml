@@ -1,0 +1,19 @@
+server:
+  port: 8086
+spring:
+  dubbo:
+    application: order-web
+    protocol:
+      name: dubbo
+#      手动分配dubbo的协议端口号
+#      port: 20881
+    registry:
+      address: 192.168.1.128:2181
+      protocol: zookeeper
+    base-package: com.atguigu.gmall
+    consumer:
+      timeout: 6000
+      check: false
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5

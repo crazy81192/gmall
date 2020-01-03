@@ -1,0 +1,20 @@
+server:
+  port: 8083
+spring:
+  dubbo:
+    application: search-web
+    protocol:
+      name: dubbo
+    registry:
+      address: 192.168.1.128:2181
+      protocol: zookeeper
+    base-package: com.atguigu.gmall
+    consumer:
+      timeout: 60000
+      check: false
+  #关闭thymeleaf的缓存（热部署）
+  thymeleaf:
+    cache: false
+    #松校验
+    mode: LEGACYHTML5
+

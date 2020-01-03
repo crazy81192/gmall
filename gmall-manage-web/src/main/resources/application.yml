@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  dubbo:
+    application: manage-web
+    protocol:
+      name: dubbo
+    registry:
+      address: 192.168.1.128:2181
+      protocol: zookeeper
+    base-package: com.atguigu.gmall
+    consumer:
+      timeout: 6000
+      check: false
